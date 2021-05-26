@@ -44,8 +44,6 @@ public class SelectCollege extends HttpServlet{
 
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-		Scanner s = new Scanner(System.in);
-		s.hasNext();
 		Response responseEntity;
 		StudentService stdserve = new StudentService();
 		String fName = req.getParameter("fname"); 
