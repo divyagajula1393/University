@@ -2,6 +2,7 @@ package university.controller;
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Iterator;
+import java.util.Scanner;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.Servlet;
@@ -43,7 +44,8 @@ public class SelectCollege extends HttpServlet{
 
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-
+		Scanner s = new Scanner(System.in);
+		s.hasNext();
 		Response responseEntity;
 		StudentService stdserve = new StudentService();
 		String fName = req.getParameter("fname"); 
@@ -64,12 +66,14 @@ public class SelectCollege extends HttpServlet{
 		
 		responseEntity = stdserve.saveStudentService(student, ai);
 		
-		HttpSession session = req.getSession();
-		session.setAttribute("responseEntity", responseEntity);
 		
-		//req.setAttribute("responseEntity", responseEntity);
-		RequestDispatcher dispatcher = req.getRequestDispatcher("confirmation.jsp");
-		dispatcher.forward(req, res);
+		  HttpSession session = req.getSession();
+		  session.setAttribute("responseEntity", responseEntity);
+		  
+		  //req.setAttribute("responseEntity", responseEntity); 
+		  RequestDispatcher dispatcher = req.getRequestDispatcher("view_student.jsp");
+		  dispatcher.forward(req, res);
+		 
 		
 	}
 

@@ -52,11 +52,11 @@ public class ViewDetails implements Servlet{
 				+ "\r\n"
 				+ "<h1>Patient Details: </h1>\r\n"
 				+ "\r\n" 	
-				+"<h5>Patient ID : "+ student.getRoll() +"</h5>\r\n" 
-				+"<h5>Patient Name : "+ student.getFname() + student.getLname() +"</h5>\r\n"
-				+ "<h5>Patient Gender : " + student.getGender()+ "</h5>\r\n"
-				+ "<h5>Patient Age : "+ student.getCollege()+"</h5>\r\n"
-				+"<h5>Patient Category : "+ student.getDept()+"</h5>\r\n"
+				+"<h5>Student Id: "+ student.getRoll() +"</h5>\r\n" 
+				+"<h5>Student Name : "+ student.getFname() + student.getLname() +"</h5>\r\n"
+				+ "<h5>Student Gender : " + student.getGender()+ "</h5>\r\n"
+				+ "<h5>College : "+ student.getCollege()+"</h5>\r\n"
+				+"<h5>Department : "+ student.getDept()+"</h5>\r\n"
 				+ "</body>\r\n"
 				+ "</html>";
 		res.getWriter().write(html);
