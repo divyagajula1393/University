@@ -38,7 +38,7 @@ public class SelectCollege extends HttpServlet{
 
 	@Override
 	public void init(ServletConfig arg0) throws ServletException {
-		System.out.println("SERVLET INITIALIZED ***********************");
+		System.out.println("SERVLET INITIALIZED ***********!!!!!!");
 
 	}
 
